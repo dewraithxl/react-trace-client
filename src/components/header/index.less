@@ -1,0 +1,44 @@
+.header {
+  height: 60px;
+  background-color: #fff;
+  font-size: 15px;
+
+  .header-top {
+    height: 30px;
+    border-bottom: #4f6db6 solid;
+    text-align: right;
+    padding: 5px 30px;
+    span {
+      margin: 0 30px;
+    }
+  }
+  .header-bottom {
+    height: 30px;
+    display: flex;
+    line-height: 30px;
+    .header-bottom-left {
+      width: 25%;
+      text-align: center;
+      position: relative;
+      // 伪元素
+      &::after {
+        content: '';
+        border-top: solid #fff 15px;
+        border-right: solid transparent 15px;
+        border-bottom: solid transparent 15px;
+        border-left: solid transparent 15px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%
+      }
+    }
+    .header-bottom-right {
+      width: 75%;
+      text-align: right;
+      span {
+        margin-right: 30px;
+      }
+    }
+  }
+}
